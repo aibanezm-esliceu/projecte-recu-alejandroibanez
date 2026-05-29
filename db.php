@@ -1,6 +1,6 @@
 <?php
 try {
-$pdo = new PDO("mysql:host=db;dbname=recu_db", "recu", "recu123", [
+$pdo = new PDO("mysql:host=db;dbname=recu", "recu", "recu123", [
 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 ]);
 } catch (PDOException $e) {
