@@ -1,13 +1,12 @@
 <?php
-try {
-$pdo = new PDO(
-"mysql:host=db;dbname=recu_db",
-$mysqli = new mysqli("db", "recu", "recu123", "recu_db");
-"recu",
-"recu123",
-[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
-);
-} catch (PDOException $e) {
-die("Error de conexión: " . $e->getMessage());
+$host = 'db';
+$user = 'recu';
+$user = 'recu123';
+$dbname = 'recu_db';
+
+$conn = new msqli($db, $recu, $recu123, $recu_db);
+
+if($conn->connect_error) {
+    die("Error de conexión: ". $conn->connect_error);
 }
 ?>
