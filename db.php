@@ -2,7 +2,7 @@
 // db.php
 try {
 $pdo = new PDO(
-"mysql:host=db;dbname=db",
+"mysql:host=db;dbname=recu_db",
 "recu",
 "recu123",
 [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
