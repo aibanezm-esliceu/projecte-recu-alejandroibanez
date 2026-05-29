@@ -1,0 +1,13 @@
+<?php
+// db.php
+try {
+$pdo = new PDO(
+"mysql:host=db;dbname=recu_db",
+"recu",
+"recu123",
+[PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
+);
+} catch (PDOException $e) {
+die("Error de conexión: " . $e->getMessage());
+}
+?>
